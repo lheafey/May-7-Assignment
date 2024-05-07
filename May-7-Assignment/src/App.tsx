@@ -8,7 +8,8 @@ function App(){
     'London',
     'Paris'
 ]; 
-  return <div><ListGroup items = {items} heading='Cities'></ListGroup></div>
+const handleselectitem = (item:string) =>{console.log(item);}
+  return <div><ListGroup items = {items} heading='Cities' onSelectItem={handleselectitem}></ListGroup></div>
 }
 
 export default App;
