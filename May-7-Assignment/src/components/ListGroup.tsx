@@ -6,7 +6,7 @@ interface Props{
 }
 function ListGroup({items, heading, onSelectItem}:Props){ 
     const [selectedIndex, setSelectedIndex] = useState(-1);
-    heading = "";
+
     const handleClick = (event:MouseEvent) => console.log(event)
 
     return(<>
@@ -17,7 +17,7 @@ function ListGroup({items, heading, onSelectItem}:Props){
         className = {selectedIndex === index ? 'list-group-item active':'list-group-item'}
         key={item}
         onClick={()=>{setSelectedIndex(index);
-            onSelectItem(item);
+            onSelectItem(item)
         }}
          >{item}</li>)}
           </ul>
